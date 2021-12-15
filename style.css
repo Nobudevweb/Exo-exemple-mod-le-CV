@@ -1,0 +1,131 @@
+
+
+:root{/* permet de cibler la racine de l'arbre du document*/
+    --main-bg-color: #202020; /*pour ne plus avoir besoin de retaper le code des couleurs*/
+    --main-text-color: antiquewhite;
+    --main-link-color: darkred;
+}
+
+/* BONNE PRATIQUE : Ordonner la CSS par ordre alphabétique*/
+
+body{
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+header img.avatar{/*on va modifier la taille de l'image*/
+    width: 200px;
+    height: 200px;
+}
+
+
+
+header h1.name{/* on modifie la taille du texte*/
+    font-size: 112px;
+    text-transform: uppercase;
+}
+
+
+
+nav.nav ul li{
+    display: inline-block; /* mettre tout sur une ligne pour faire une barre nav*/
+}
+
+
+
+nav.nav ul li a{
+    text-decoration: none;
+    padding: 10px;
+    color: var(--main-link-color);
+}
+
+
+
+nav.nav ul li a:hover/*si je passe ma souris sur une balise <a> tu vas lui changer sa couleur*/{
+    color: var(--main-text-color);
+    /*transform: scale(1.2); pour faire un effet zoom sur le texte, mais il faut mettre celui-ci dans une div auparavant*/
+}
+
+
+
+section{
+    display: table;
+    width: 100%;
+}
+
+
+
+.section-container{
+ /* on met un point quand c'est une class!  */   
+    margin: 50px 20%;
+    padding: 50px;
+    background-color: rgba(20, 59, 20, 0.3);/*trouver la bonne!!!...c'est pour faire ressortir un peu le texte sur l'image*/
+} 
+
+
+
+section.me {
+    
+    height: 25vh;/* 100vh est la taille totale de l'écran*/
+    background:url(1030210.png)/*on peut trouver toutes les images disponibles dans notre dossier en appuyant sur ctrl+espace!*/    fixed no-repeat; /* ne répète pas l'image si elle n'est pas assez grande*/
+    background-position: center;
+}
+
+section.xp {
+    
+    height: 25vh;/* 100vh est la taille totale de l'écran*/
+    background:url(1064496.jpg)/*on peut trouver toutes les images disponibles dans notre dossier en appuyant sur ctrl+espace!*/    fixed no-repeat; /* ne répète pas l'image si elle n'est pas assez grande*/
+    background-position: center;
+}
+
+section.diplomes {
+   
+    height: 25vh;/* 100vh est la taille totale de l'écran*/
+    background:url(927025.png)/*on peut trouver toutes les images disponibles dans notre dossier en appuyant sur ctrl+espace!*/    fixed no-repeat; /* ne répète pas l'image si elle n'est pas assez grande*/
+    background-position: center;
+}
+
+section.languesloisirs {
+   
+    height: 25vh;/* 100vh est la taille totale de l'écran*/
+    background:url(1030210.png)/*on peut trouver toutes les images disponibles dans notre dossier en appuyant sur ctrl+espace!*/    fixed no-repeat; /* ne répète pas l'image si elle n'est pas assez grande*/
+    background-position: center;
+}
+
+
+
+/* MEDIA QUERIES !!!!! */
+
+@media only screen and (max-width: 900px){ /*  c'est un BREACKPOINT permet de faire du responsive sur ce qui ne va pas*/
+
+    header img.avatar{
+        width: 100px;
+        height: 100px;
+    }
+
+    header h1.name{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    /* s'applique uniquement aux écrans de largeur inférieure ou égale à 600px*/
+    nav.nav ul li{
+        display: none;
+    }
+     
+
+
+}
+
+/* si on veut renommer partout : ctrl+f!!!*/
